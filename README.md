@@ -36,13 +36,13 @@ Step 4: Once the students are enrolled, you can check the attendance in the Stud
  ![alt text](images/3.png)
 
 Setp 5: Click on Train the Model. Here i have used mutithreading, thread 1 for progress bar and thread 2 for model training. 
-Step 6: The model will be trained in backend and saved into the Model directory as a .model file.
+Step 6: The model will be trained in backend and saved into the Model directory as a .model file.<br/>
  ![alt text](images/4.png)<br/>
  
 Step 7: You can now jump on to the left section for taking attendance.
 Step 8: I have considered English and Hindi lecture for now and can be increased to desired numbers. Click on any of them and click on check attendance. The attendance will be displayed below and clear button can be used to clear the window.
 
-Step 9: After verifying the existing attendance, Select the desired lecture and clik on "Take Attendance"
+Step 9: After verifying the existing attendance, Select the desired lecture and clik on "Take Attendance"<br/>
 
 ![alt text](images/5.png)<br/>
 Step 10: The model will take approximately 15 secs to start now and a new window will be displayed.
