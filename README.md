@@ -17,7 +17,7 @@ The project is divided into following sections:
 ![alt text](images/17.png)
 
 
-## **Prequisites:**
+# - **Prequisites:**
 
 Install the packages mentioned in Requirements folder depending on CPU/ GPU based systems
 
@@ -57,7 +57,7 @@ Step 14: Click on Quit to close the window
 
 Diving deep into the process: 
 
-## - **Generating the training dataset/ Students database**
+# - **Generating the training dataset/ Students database**
 
 1. The students input are taken from the Tkinter UI using text field and a function is called in Generate_Dataset.py file. The code pops up a window frame
 2. As soon as the user inputs the details (Name and Roll Number) the data is saved in MongoDB database using Pymongo<br/>
@@ -78,7 +78,7 @@ Diving deep into the process:
 
 
 
-## - **Model Training**
+# - **Model Training**
 
 1. After taking pictures of the desired students now you can click on Train the model Button
 2. The control is shifted to ModelTraining() function in Model_train.py
@@ -97,7 +97,7 @@ Diving deep into the process:
 
 
 
-## **Face Recognition/ Take Attendance**
+# - **Face Recognition/ Take Attendance**
 1. On clicking the class (Hindi/English) Radiobutton, you can click on Take attendance
 ![alt text](images/12.png)<br/>
 
