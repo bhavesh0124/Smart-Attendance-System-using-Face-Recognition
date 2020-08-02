@@ -35,7 +35,7 @@ Step 3: Clik on the Take Images button, A new window (frame) should open and cli
 Step 4: Once the students are enrolled, you can check the attendance in the Students_Enrollment.CSV<br/>
  ![alt text](images/3.png)
 
-Setp 5: Click on Train the Model. Here i have used mutithreading, thread 1 for progress bar and thread 2 for model training. 
+Setp 5: Click on Train the Model. Here i have used mutithreading, thread 1 for progress bar and thread 2 for model training. <br/>
 Step 6: The model will be trained in backend and saved into the Model directory as a .model file.<br/>
  ![alt text](images/4.png)<br/>
  
