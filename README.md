@@ -68,31 +68,31 @@ Diving deep into the process:
 5. Then, the names folders/directories are created in the people folder with "rollnumber"+"name" format<br/>
 
 ![alt text](images/8.png)<br/>
-6. Faces of students are detected in real-time using Harcascade classifier in OpenCV2 (Faces.xml)
+6. Faces of students are detected in real-time using Harcascade classifier in OpenCV2 (Faces.xml)<br/>
 7. The pictures are stored in increasing digits order( 30 Pictures per person are taken as of now)<br/>
 
 ![alt text](images/9.png)<br/>
 
-8. After taking 30 images the window(frame) is automatically destroyed
+8. After taking 30 images the window(frame) is automatically destroyed<br/>
 9. Following the above setps new students can be enrolled<br/>
 
 
 
 # - **Model Training**
 
-1. After taking pictures of the desired students now you can click on Train the model Button
-2. The control is shifted to ModelTraining() function in Model_train.py
-3. Number of classes are then calculated by reading the Student_Enrollment.csv using pandas and calculating the shape[0]
-4. Learning rate are set to 0.01, epochs to 400 and batch_size to 16, hyperparameters can be further tweaked for better performance
-5. Then the folders from People folder are sorted and readed to extract the images
-6. Images are resized to (160,160) then embeddings are extracted using pretrained model "facenet_keras.h5"
-7. The embeddings are appended to a list and then converted to numpy array for Training
+1. After taking pictures of the desired students now you can click on Train the model Button<br/>
+2. The control is shifted to ModelTraining() function in Model_train.py<br/>
+3. Number of classes are then calculated by reading the Student_Enrollment.csv using pandas and calculating the shape[0]<br/>
+4. Learning rate are set to 0.01, epochs to 400 and batch_size to 16, hyperparameters can be further tweaked for better performance<br/>
+5. Then the folders from People folder are sorted and readed to extract the images<br/>
+6. Images are resized to (160,160) then embeddings are extracted using pretrained model "facenet_keras.h5"<br/>
+7. The embeddings are appended to a list and then converted to numpy array for Training<br/>
 8. I have used Adam optimizer and following are the layers:
 	1. Input layer 128 Neurons followed by Relu Activation
 	2. 3 Hidden layers with 64, 32 and 16 neurons respectively
 	3. Output Layer with Softmax Activation<br/>
 ![alt text](images/10.png)<br/>
-9. The model takes around 30-40 seconds for training and saved as "Face_recoginition.Model" in the Model directory
+9. The model takes around 30-40 seconds for training and saved as "Face_recoginition.Model" in the Model directory<br/>
 ![alt text](images/11.png)<br/>
 
 
