@@ -13,7 +13,7 @@ The project is divided into following sections:
 1. Generating Training data/ Students pic and enrolling them in mongoDB database in all the collections(Hindi and English)_and a CSV file named Students Enrollment
 2. Once the required dataset is generated the model is trained which comprises of several layers with softmax in the output layer** (I have not used any regularization as such as the model was giving good response in normal lightning conditions however it can be used if we have too many classes/students)
 3. The user can then select the required lecture (English and Hindi) and check the existing attendance 
-4. The user can then take the attendance by clicking on the required button. It takes approximately 15 seconds to start the attendance window**.(The attendance is stored in MongoDB database and seperate collections are created for English and Hindi classes to avoid overlaps)
+4. The user can then take the attendance by clicking on the required button. It takes approximately 15 seconds to start the attendance window.(The attendance is stored in MongoDB database and seperate collections are created for English and Hindi classes to avoid overlaps)
 ![alt text](images/17.png)
 
 
