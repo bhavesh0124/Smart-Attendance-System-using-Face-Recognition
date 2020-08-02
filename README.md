@@ -45,7 +45,7 @@ Step 8: I have considered English and Hindi lecture for now and can be increased
 Step 9: After verifying the existing attendance, Select the desired lecture and clik on "Take Attendance"<br/>
 
 ![alt text](images/5.png)<br/>
-Step 10: The model will take approximately 15 secs to start now and a new window will be displayed.
+Step 10: The model will take approximately 15 secs to start now and a new window will be displayed.<br/>
 Step 11: The window will capture the attendance of the recognized face for only 1 time for the desired class.<br/>
 Step 12: When the attendance is taken, you can click on show attendance and the updated attendance will be displayed for the respective lecture/class.<br/>
 
