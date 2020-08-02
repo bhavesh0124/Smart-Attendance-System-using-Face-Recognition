@@ -26,32 +26,32 @@ Install the packages mentioned in Requirements folder depending on CPU/ GPU base
 
 **Warning: Make sure that the students are enrolled sequentially starting from Roll Number 1 and make sure that duplicated Roll number are not inserted**
 
-Step 1: Run Python3 UI.py
+Step 1: Run Python3 UI.py <br/>
 Step 2: Once the UI is up and running, start with the right hand section for new enrollments(Students entered are enrolled in both the subjects(Collections in mongodb) with 0 Attendance)
 
 ![alt text](images/1.png)
 
-Step 3: Clik on the Take Images button, A new window (frame) should open and clicks 50 images of the detected face
-Step 4: Once the students are enrolled, you can check the attendance in the Students_Enrollment.CSV
+Step 3: Clik on the Take Images button, A new window (frame) should open and clicks 50 images of the detected face<br/>
+Step 4: Once the students are enrolled, you can check the attendance in the Students_Enrollment.CSV<br/>
  ![alt text](images/3.png)
 
 Setp 5: Click on Train the Model. Here i have used mutithreading, thread 1 for progress bar and thread 2 for model training. 
 Step 6: The model will be trained in backend and saved into the Model directory as a .model file.<br/>
  ![alt text](images/4.png)<br/>
  
-Step 7: You can now jump on to the left section for taking attendance.
+Step 7: You can now jump on to the left section for taking attendance.<br/>
 Step 8: I have considered English and Hindi lecture for now and can be increased to desired numbers. Click on any of them and click on check attendance. The attendance will be displayed below and clear button can be used to clear the window.
 
 Step 9: After verifying the existing attendance, Select the desired lecture and clik on "Take Attendance"<br/>
 
 ![alt text](images/5.png)<br/>
 Step 10: The model will take approximately 15 secs to start now and a new window will be displayed.
-Step 11: The window will capture the attendance of the recognized face for only 1 time for the desired class.
-Step 12: When the attendance is taken, you can click on show attendance and the updated attendance will be displayed for the respective lecture/class
+Step 11: The window will capture the attendance of the recognized face for only 1 time for the desired class.<br/>
+Step 12: When the attendance is taken, you can click on show attendance and the updated attendance will be displayed for the respective lecture/class.<br/>
 
-![alt text](images/6.png)
+![alt text](images/6.png)<br/>
 Step 13: For reference, the attendance are stored in both mongodb and the CSV files present in Hindi and English Directories.
-Step 14: Click on Quit to close the window
+Step 14: Click on Quit to close the window.
 
 
 
@@ -59,22 +59,22 @@ Diving deep into the process:
 
 # - **Generating the training dataset/ Students database**
 
-1. The students input are taken from the Tkinter UI using text field and a function is called in Generate_Dataset.py file. The code pops up a window frame
+1. The students input are taken from the Tkinter UI using text field and a function is called in Generate_Dataset.py file. The code pops up a window frame.<br/>
 2. As soon as the user inputs the details (Name and Roll Number) the data is saved in MongoDB database using Pymongo<br/>
 ![alt text](images/7.png)<br/>
 
-3. The students are enrolled in both the subjects with 0 Attendance in the function PushMongo
-4. After the students are enrolled in Mongo they are appended in a CSV file "Student_Enrollment.CSV"(This file is important as the number of classes in Recognizer are derived from here)
+3. The students are enrolled in both the subjects with 0 Attendance in the function PushMongo.<br/>
+4. After the students are enrolled in Mongo they are appended in a CSV file "Student_Enrollment.CSV"(This file is important as the number of classes in Recognizer are derived from here)<br/>
 5. Then, the names folders/directories are created in the people folder with "rollnumber"+"name" format<br/>
 
 ![alt text](images/8.png)<br/>
 6. Faces of students are detected in real-time using Harcascade classifier in OpenCV2 (Faces.xml)
-6. The pictures are stored in increasing digits order( 30 Pictures per person are taken as of now)<br/>
+7. The pictures are stored in increasing digits order( 30 Pictures per person are taken as of now)<br/>
 
 ![alt text](images/9.png)<br/>
 
-7. After taking 30 images the window(frame) is automatically destroyed
-8. Following the above setps new students can be enrolled<br/>
+8. After taking 30 images the window(frame) is automatically destroyed
+9. Following the above setps new students can be enrolled<br/>
 
 
 
@@ -105,16 +105,16 @@ Diving deep into the process:
 3. The labels are created in a dictionary with value 0 for all the names of students(names are extracted from people folder)
 4. Then a window is poped which detects the face in realtime with the same CV2 harcascade classifier followed by extraction of embeddings <br/>
 ![alt text](images/13.png)<br/>
-5. If the output value is more than 0.85(hardcoded) then a respective class is matched against that value
+5. If the output value is more than 0.85(hardcoded) then a respective class is matched against that value.<br/>
 6. I have created an empty dictionary intialising 0 values for all the students. Everytime  the face is matched with the label the value is incremented by 1 value. Once this value reached to 30(hardcoded) "Attendance is completed" is displayed on the header of the frame<br/>
 ![alt text](images/14.png)<br/>
 7. When the threshold reaches 30, for all the present students the data is updated in MongoDB table using Data.update
 8. For MongoDB the control is shifted to retrieve_pymongo_data.py where the Database and collections are pulled based on the subject and updated
-9. Export CSV function saves the mongodb data to CSV files for English and Hindi folders respectively<br/>
+9. Export CSV function saves the mongodb data to CSV files for English and Hindi folders respectively.<br/>
 ![alt text](images/15.png)<br/>
 ![alt text](images/16.png)<br/>
-10. "q" key on the keyboard can be used to exit the window
-11. Quit can be used to exit the tkinter UI
+10. "q" key on the keyboard can be used to exit the window.<br/>
+11. Quit can be used to exit the tkinter UI.<br/>
 
 
 
