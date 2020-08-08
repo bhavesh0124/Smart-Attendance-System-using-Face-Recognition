@@ -1,5 +1,5 @@
 # **Smart Attendance System Using Face Recognition**
-Finally brushing on this piece which I started as my fourth-year project. In a nutshell, This is an automated attendance system that eliminates the manual efforts which are involved. The overall accuracy of around 85% and is highly dependent on the lighting conditions. For now, I have created the system for English and Hindi lectures which can be further extended to more lectures/subjects. Everything is automated from enrolling students in MongoDB, to creating directories, and saving the marked attendance.
+Finally brushing up on this piece which I started as my fourth-year project. In a nutshell, This is an automated attendance system that eliminates the manual efforts which are involved. The overall accuracy of around 85% and is highly dependent on the lighting conditions. For now, I have created the system for English and Hindi lectures which can be further extended to more lectures/subjects. Everything is automated from enrolling students in MongoDB, to creating directories, and saving the marked attendance.
 
 
 
@@ -18,7 +18,7 @@ The project is divided into the following sections:
 
 # - **Prequisites:**
 
-Install the packages mentioned in Requirements folder depending on CPU/ GPU based systems
+Install the packages mentioned in Requirements folder depending on CPU/ GPU based systems.
 
 ## **How to use the UI?**
 (UI is made using python Tkinter)
